@@ -3,11 +3,10 @@ const router = express.Router()
 
 let db = require('../helper/db')
 
-/* router.get('/abc', async (req, res) => {
-  console.log("abc:", req.query)
-  let data = await db('select * from china-city')
+router.get('/categorydata', async (req, res) => {
+  let data = await db('select * from category where parent_id = 0')
   res.send(data)
-}) */
+})
 
 /* router.post('/bcd', async (req, res) => {
   console.log("bcd:", req.body)

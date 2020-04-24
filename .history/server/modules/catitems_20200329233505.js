@@ -3,11 +3,11 @@ const router = express.Router()
 
 let db = require('../helper/db')
 
-/* router.get('/abc', async (req, res) => {
-  console.log("abc:", req.query)
-  let data = await db('select * from china-city')
+/* 获取导航菜单 */
+router.get('/abc', async (req, res) => {
+  let data = await db('select * from catitems')
   res.send(data)
-}) */
+})
 
 /* router.post('/bcd', async (req, res) => {
   console.log("bcd:", req.body)

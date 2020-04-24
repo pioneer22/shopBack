@@ -1,13 +1,14 @@
+// 角色管理
 const express = require('express')
 const router = express.Router()
 
 let db = require('../helper/db')
 
-/* router.get('/abc', async (req, res) => {
-  console.log("abc:", req.query)
-  let data = await db('select * from china-city')
+// 角色列表
+router.get('/roles', async (req, res) => {
+  let data = await db('select * from sp_role')
   res.send(data)
-}) */
+})
 
 /* router.post('/bcd', async (req, res) => {
   console.log("bcd:", req.body)
